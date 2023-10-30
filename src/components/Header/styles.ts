@@ -18,6 +18,7 @@ export const Content = styled.div`
 
     h1{
         display: flex;
+        font-size: 2rem;
         align-items: center;
         gap:10px;
     }
