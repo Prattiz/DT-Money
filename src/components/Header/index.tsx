@@ -11,7 +11,7 @@ export function Header() {
                 <img src={icon}/>
                 DT Money
             </h1>
-            <ButtonTransaction>Nova Transação</ButtonTransaction>
+            <ButtonTransaction>New Transaction</ButtonTransaction>
         </Content>
     </Container>
   )
