@@ -24,6 +24,16 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body, input, textarea, button{
-        font: 400 1.6rem Roboto, sans-serif;
+        font: 400 1.4rem Roboto, sans-serif;
+    }
+
+    button{
+        cursor: pointer;
+        border: none;
+
+        &:hover{
+            filter: brightness(.9);
+            transition: 0.2s;
+        }
     }
 `
