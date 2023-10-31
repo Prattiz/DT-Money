@@ -52,6 +52,11 @@ export const Content = styled(Dialog.Content)`
             margin-top: 1.5rem;
         }
     }
+
+    svg{
+        width: 20px;
+        height: 20px;
+    }
 `
 
 export const XButton = styled(Dialog.Close)`
@@ -75,9 +80,11 @@ export const DivRadio = styled(RadioGroup.Root)`
   margin-top: 0.5rem;
 `
 
+interface Props{
+    variant: 'income' | 'outcome'
+}
 
-
-export const ButtonRadio = styled(RadioGroup.Item)`
+export const ButtonRadio = styled(RadioGroup.Item,)<Props>`
   background: ${(props) => props.theme['gray-700']};
   padding: 1rem;
   display: flex;
@@ -86,4 +93,18 @@ export const ButtonRadio = styled(RadioGroup.Item)`
   gap: 0.5rem;
   border-radius: 6px;
   color: ${(props) => props.theme['gray-300']};
+
+  svg{
+    color: ${(props) => props.variant === 'income' ? props.theme["green-300"] : props.theme['red-300']};
+  }
+
+  &[data-state='checked']{
+    color: ${(props) => props.theme['white']};
+    background-color: ${(props) => props.variant === 'income' ? props.theme['green-500'] : props.theme['red-500']};
+
+    svg{
+        color: ${(props) => props.theme['white']} !important;
+    }
+
+  }
 `

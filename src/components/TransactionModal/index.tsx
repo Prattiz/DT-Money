@@ -15,7 +15,7 @@ export function TransactionModal(){
 
             <Content>
                 <Dialog.Title>New Transaction</Dialog.Title>
-                <XButton><X size={23}/></XButton>
+                <XButton><X/></XButton>
                 
                 <form>
                     <input type="text" required placeholder="Description"/>
@@ -23,13 +23,13 @@ export function TransactionModal(){
                     <input type="text" required placeholder="Category"/>
 
                     <DivRadio>
-                        <ButtonRadio value="Gains">
-                            <ArrowCircleUp size={20} color="#00B37E"/>
+                        <ButtonRadio value="Gains" variant="income">
+                            <ArrowCircleUp/>
                             Gains 
                         </ButtonRadio>
 
-                        <ButtonRadio value="Loss">
-                            <ArrowCircleDown size={20} color="#F75A68"/>
+                        <ButtonRadio value="Loss" variant="outcome">
+                            <ArrowCircleDown/>
                             Loss 
                         </ButtonRadio>
                     </DivRadio>
