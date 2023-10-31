@@ -9,7 +9,7 @@ export function Summary() {
     <Container>
         <Card>
             <header>
-                <span>Deposits</span>
+                <span>Gains</span>
                 <ArrowCircleUp size={32} color="#00B37E"/>
             </header>
 

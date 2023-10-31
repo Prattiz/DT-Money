@@ -20,14 +20,14 @@ export function App() {
             <tr>
               <td width="50%">Pizza</td>
               <td><Price variant="outcome">- R$ 100,00</Price></td>
-              <td>Alimentação</td>
+              <td>Food</td>
               <td>10/11/2022</td>
             </tr>
 
             <tr>
-              <td width="50%">Desenvolvimento de site</td>
+              <td width="50%">Work</td>
               <td><Price variant="Income">R$ 12.000,00</Price></td>
-              <td>Venda</td>
+              <td>Work</td>
               <td>02/11/2022</td>
             </tr>
           </tbody>

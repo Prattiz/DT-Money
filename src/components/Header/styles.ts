@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Trigger } from "@radix-ui/react-dialog";
 
 export const Container = styled.header`
 
@@ -24,7 +25,7 @@ export const Content = styled.div`
     }
 `
 
-export const ButtonTransaction = styled.button`
+export const ButtonTransaction = styled(Trigger)`
 
     background-color: ${props => props.theme["green-500"]};
     color:${props => props.theme["white"]};
