@@ -5,6 +5,7 @@ import { SearchForm } from "./components/SearchForm";
 import { TrasactionContext } from "../context/context";
 
 import { Container, Trasaction, Price } from "./styles";
+import { dateFormater, priceFormater } from "../utils/formater";
 
 
 
@@ -31,12 +32,13 @@ export function Home() {
 
                   <td>
                     <Price variant={transactions.type}>
-                    R$ {transactions.price}
+                    {transactions.type === "outcome" && '- '}
+                    {priceFormater.format(transactions.price)}
                     </Price>
                   </td>
 
                   <td>{transactions.category}</td>
-                  <td>{transactions.createdAt}</td>
+                  <td>{dateFormater.format(new Date(transactions.createdAt))}</td>
                 </tr>
               )
               })
