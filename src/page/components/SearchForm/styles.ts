@@ -28,5 +28,15 @@ export const Form = styled.form`
         color: ${props => props.theme['green-300']};
         font-weight: bold;
         border-radius: 6px;
+
+        &:hover{
+            background-color:${props => props.theme['green-300']};
+            color: ${props => props.theme['white']};
         }
+
+        &:disabled{
+            cursor: not-allowed;
+            background-color: transparent;
+        }
+    }
 `
