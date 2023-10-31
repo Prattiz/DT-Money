@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface PriceProps{
-    variant: 'Income' | 'outcome'
+    variant: 'income' | 'outcome'
 }
 
 export const Container = styled.div``
@@ -38,6 +38,6 @@ export const Trasaction = styled.main`
 
 export const Price = styled.span<PriceProps>`
 
-    color: ${props => props.variant === 'Income' ? props.theme['green-300'] : props.theme['red-300']}
+    color: ${props => props.variant === 'income' ? props.theme['green-300'] : props.theme['red-300']}
 `
 

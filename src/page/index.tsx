@@ -1,11 +1,17 @@
+import { useContext } from "react";
 import { Header } from "../components/Header";
 import { Summary } from "../components/Summary";
 import { SearchForm } from "./components/SearchForm";
+import { TrasactionContext } from "../context/context";
 
 import { Container, Trasaction, Price } from "./styles";
 
 
-export function App() {
+
+
+export function Home() {
+
+  const { transactions } = useContext(TrasactionContext)
 
   return (
     <Container>
@@ -17,19 +23,24 @@ export function App() {
       
       <table>
           <tbody>
-            <tr>
-              <td width="50%">Pizza</td>
-              <td><Price variant="outcome">- R$ 100,00</Price></td>
-              <td>Food</td>
-              <td>10/11/2022</td>
-            </tr>
+            {
+            transactions.map(transactions => {
+              return(
+                <tr key={transactions.id}>
+                  <td width="50%">{transactions.description}</td>
 
-            <tr>
-              <td width="50%">Work</td>
-              <td><Price variant="Income">R$ 12.000,00</Price></td>
-              <td>Work</td>
-              <td>02/11/2022</td>
-            </tr>
+                  <td>
+                    <Price variant={transactions.type}>
+                    R$ {transactions.price}
+                    </Price>
+                  </td>
+
+                  <td>{transactions.category}</td>
+                  <td>{transactions.createdAt}</td>
+                </tr>
+              )
+              })
+            }
           </tbody>
         </table>
      </Trasaction>
