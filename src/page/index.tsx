@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContextSelector } from "use-context-selector";
 import { Header } from "../components/Header";
 import { Summary } from "../components/Summary";
 import { SearchForm } from "./components/SearchForm";
@@ -12,7 +12,9 @@ import { dateFormater, priceFormater } from "../utils/formater";
 
 export function Home() {
 
-  const { transactions } = useContext(TrasactionContext)
+  const transactions = useContextSelector(TrasactionContext, (context) => {
+    return context.transactions
+  })
 
   return (
     <Container>
