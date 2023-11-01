@@ -37,14 +37,14 @@ export function TransactionsProvider({children}: childrenProps){
     const [transactions, setTrasactions] = useState<TransactionsProps[]>([]);
 
     async function loadTransactions(query?: string){
-        const response = await api.get('transactions',{
+        const response = await api.get('transactions', {
             params: {
 
                 _sort: "createdAt",
                 _order: "desc",
                 'q': query,
             }
-        })
+        });
         
         setTrasactions(response.data) 
     }
