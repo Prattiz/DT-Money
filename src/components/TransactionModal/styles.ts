@@ -50,6 +50,11 @@ export const Content = styled(Dialog.Content)`
             padding: 0 1.5rem;
             border-radius: 6px;
             margin-top: 1.5rem;
+            
+            &:disabled{
+                cursor: not-allowed;
+                background-color: transparent;
+            }
         }
     }
 
@@ -86,7 +91,7 @@ interface Props{
 
 export const ButtonRadio = styled(RadioGroup.Item,)<Props>`
   background: ${(props) => props.theme['gray-700']};
-  padding: 1rem;
+  padding: 1.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,6 +110,5 @@ export const ButtonRadio = styled(RadioGroup.Item,)<Props>`
     svg{
         color: ${(props) => props.theme['white']} !important;
     }
-
   }
 `
